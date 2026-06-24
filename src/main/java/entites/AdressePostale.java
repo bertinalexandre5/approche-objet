@@ -5,6 +5,4 @@ public class AdressePostale {
       String libelleRue;
       String codePostal;
       String ville;
-
-    }
 }

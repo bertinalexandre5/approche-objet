@@ -7,4 +7,4 @@ public class Personne {
     public String prenom;
     public AdressePostale adresse;
 }
-}
+

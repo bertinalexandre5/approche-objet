@@ -9,7 +9,7 @@ public class TestPersonne {
         a1.numeroRue = 15;
         a1.libelleRue = "rue du haut";
         a1.codePostal = "21000";
-        a1.ville = "inconnu"
+        a1.ville = "inconnu";
 
         Personne sujet1 = new Personne();
         sujet1.nom = "Bertin";
