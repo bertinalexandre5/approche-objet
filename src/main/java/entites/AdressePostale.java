@@ -7,10 +7,11 @@ public class AdressePostale {
       String codePostal;
       String ville;
 
-      public AdressePostale(int numero, String libelle, String code, String v) {
-            this.numeroRue = numero;
-            this.libelleRue = libelle;
-            this.codePostal = code;
-            this.ville = v
+      public AdressePostale(int numeroRue, String libelleRue, String codePostal, String ville) {
+            this.numeroRue = numeroRue;
+            this.libelleRue = libelleRue;
+            this.codePostal = codePostal;
+            this.ville = ville;
       }
+
 }
