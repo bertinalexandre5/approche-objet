@@ -12,8 +12,8 @@ public class TestBanque {
     comptes[0] = new Compte("FR25", 165.00);
     comptes[1] = new CompteTaux("FR85", 500.00, 2.5);
 
-    for (Compte compte : comptes) {
-        System.out.println(compte);
+    for (int i=0; i<comptes.length; i++) {
+        System.out.println(comptes[i]);
     }
     }
 }

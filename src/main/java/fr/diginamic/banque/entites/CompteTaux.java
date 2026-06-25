@@ -12,6 +12,11 @@ public class CompteTaux extends Compte {
         this.tauxRemuneration = tauxRemuneration;
     }
 
+    @Override
+    public String toString(){
+        return super.toString() +" - Taux : "+tauxRemuneration +" %";
+    }
+
     public double getTauxRemuneration() {
         return tauxRemuneration;
     }
@@ -19,8 +24,5 @@ public class CompteTaux extends Compte {
     public void setTauxRemuneration(double tauxRemuneration) {
         this.tauxRemuneration = tauxRemuneration;
     }
-    @Override
-    public String toString(){
-        return super.toString() +" - taux : "+tauxRemuneration +" %";
-    }
+
 }

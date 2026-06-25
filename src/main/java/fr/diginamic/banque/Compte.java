@@ -11,7 +11,7 @@ public class Compte {
     }
 
     public String toString() {
-    return "numero de compte : " +numeroCompte+" - Solde : "+soldeCompte;
+    return "Numero de compte : " +numeroCompte+" - Solde : "+soldeCompte;
 }
 
     public String getNumeroCompte() {
