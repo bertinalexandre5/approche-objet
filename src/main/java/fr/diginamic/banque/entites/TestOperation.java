@@ -15,8 +15,9 @@ public class TestOperation {
 
     double montantGlobal = 0.0;
 
-    for (Operation operation : operations) {
-        String date = operation.getDateOp();
+        for (int i = 0; i < operations.length; i++) {
+            Operation operation = operations[i];
+            String date = operation.getDateOp();
         double montant = operation.getMontant();
         String type = operation.getType();
         System.out.println(type + " du "+ date + " : " + montant+ " €");
