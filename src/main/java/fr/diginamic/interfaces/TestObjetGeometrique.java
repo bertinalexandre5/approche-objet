@@ -13,6 +13,11 @@ public class TestObjetGeometrique {
     for (int i = 0; i < tab.length; i++) {
         System.out.println("Périmètre : " + tab[i].perimetre());
         System.out.println("Surface : " + tab[i].surface());
+    }
+
+    for (ObjetGeometrique ob: tab) {
+        System.out.println(ob);
+        System.out.println(ob);
 
     }
 

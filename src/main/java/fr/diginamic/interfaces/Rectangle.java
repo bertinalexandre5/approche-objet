@@ -1,5 +1,7 @@
 package fr.diginamic.interfaces;
 
+import java.util.Objects;
+
 public class Rectangle implements ObjetGeometrique{
     private double longueur;
     private double largeur;
@@ -7,6 +9,14 @@ public class Rectangle implements ObjetGeometrique{
     public Rectangle(double longueur, double largeur) {
         this.longueur = longueur;
         this.largeur = largeur;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "longueur=" + longueur +
+                ", largeur=" + largeur +
+                '}';
     }
 
     @Override
@@ -18,6 +28,8 @@ public class Rectangle implements ObjetGeometrique{
     public double surface() {
         return longueur * largeur;
     }
+
+
 
     public double getLongueur() {
         return longueur;

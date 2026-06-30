@@ -1,5 +1,6 @@
 package fr.diginamic.interfaces;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Cercle implements ObjetGeometrique {
@@ -27,6 +28,10 @@ public class Cercle implements ObjetGeometrique {
         this.rayon = rayon;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Cercle{" +
+                "rayon=" + rayon +
+                '}';
+    }
 }
