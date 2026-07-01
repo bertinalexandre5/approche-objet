@@ -1,6 +1,6 @@
 package fr.diginamic.recensement;
 
-import fr.diginamic.recensement.services.RecherchePopulationVille;
+import fr.diginamic.recensement.services.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -37,13 +37,6 @@ public class ApplicationRecensement {
         }
 
 
-//        String regionsPlusPeuplees;
-//        String departementsPlusPeuplees;
-//        String villesPlusPeupleesDep;
-//        String villesPlusPeupleesRegion;
-//        String villesPlusPeupleesFr;
-
-
         Scanner scanner = new Scanner(System.in);
         int choix = 0;
         while (choix != 9) {
@@ -59,51 +52,52 @@ public class ApplicationRecensement {
             System.out.println("9. Sortir");
 
 
-
-
-
-            choix = scanner.nextInt();
-            scanner.nextLine();
+            String choixTexte = scanner.nextLine();
+            choix = Integer.parseInt(choixTexte);
 
 
             switch (choix) {
                 case 1:
                     RecherchePopulationVille villeRecherche = new RecherchePopulationVille();
-                    villeRecherche.traiter(recensement,scanner);
+                    villeRecherche.traiter(recensement, scanner);
                     break;
-//                case 2:
-//                    System.out.println("Veuillez renseigner le nom du département :");
-//                    String nomDep = scanner.nextLine();
-//                    break;
-//                case 3:
-//                    System.out.println("Veuillez renseigner le nom de la région :");
-//                    String nomRegion = scanner.nextLine();
-//                    break;
-//                case 4:
-//                    System.out.println("Les 10 régions les plus peuplées sont : " + regionsPlusPeuplees);
-//                    break;
-//                case 5:
-//                    System.out.println("Les 10 département les plus peuplées sont : " + departementsPlusPeuplees);
-//                    break;
-//                case 6:
-//                    System.out.println("Veuillez renseigner le nom d'un département :");
-//                    String nomMaxVilleDep = scanner.nextLine();
-//                    break;
-//                case 7:
-//                    System.out.println("Veuillez renseigner le nom d'une région :");
-//                    String nomMaxVilleRegion = scanner.nextLine();
-//                    break;
-//                case 8:
-//                    System.out.println("Les 10 villes les plus peuplées en France sont : " + regionsPlusPeuplees);
-//                    break;
-//                case 9:
-//                    System.out.println("Session terminée");
-//                    break;
+                case 2:
+                    RecherchePopulationDepartement depRecherche = new RecherchePopulationDepartement();
+                    depRecherche.traiter(recensement, scanner);
+                    break;
+                case 3:
+                    RecherchePopulationRegion popRegion = new RecherchePopulationRegion();
+                    popRegion.traiter(recensement, scanner);
+                    break;
+                case 4:
+                    TopRegionsPeuplees regionTop = new TopRegionsPeuplees();
+                    regionTop.traiter(recensement, scanner);
+                    break;
+                case 5:
+                    TopDepartementPeuples depTop = new TopDepartementPeuples();
+                    depTop.traiter(recensement, scanner);
+                    break;
+                case 6:
+                    TopVillesDepartement topVillesDepartement = new TopVillesDepartement();
+                    topVillesDepartement.traiter(recensement, scanner);
+                    break;
+                case 7:
+                    TopVillesRegion topVillesRegion = new TopVillesRegion();
+                    topVillesRegion.traiter(recensement, scanner);
+                    break;
+                case 8:
+                    TopVillesPeuplees topVille = new TopVillesPeuplees();
+                    topVille.traiter(recensement, scanner);
+
+                    break;
+                case 9:
+                    System.out.println("Session terminée");
+                    break;
+
                 default:
                     System.out.println("Choix non valide, réessayez");
             }
-
+        }
         }
 
     }
-}

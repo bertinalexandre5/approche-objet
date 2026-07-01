@@ -19,12 +19,12 @@ public class Ville {
         this.population = population;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Ville ville = (Ville) o;
-        return population == ville.population && Objects.equals(codeRegion, ville.codeRegion) && Objects.equals(region, ville.region) && Objects.equals(departement, ville.departement) && Objects.equals(codeCommune, ville.codeCommune) && Objects.equals(nomCommune, ville.nomCommune);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Ville ville = (Ville) o;
+//        return population == ville.population && Objects.equals(codeRegion, ville.codeRegion) && Objects.equals(region, ville.region) && Objects.equals(departement, ville.departement) && Objects.equals(codeCommune, ville.codeCommune) && Objects.equals(nomCommune, ville.nomCommune);
+//    }
 
     @Override
     public int hashCode() {

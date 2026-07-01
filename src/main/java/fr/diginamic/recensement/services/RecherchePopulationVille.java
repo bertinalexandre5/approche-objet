@@ -3,9 +3,11 @@ package fr.diginamic.recensement.services;
 import fr.diginamic.recensement.Recensement;
 import fr.diginamic.recensement.Ville;
 
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
-public class RecherchePopulationVille implements MenuService {
+public class RecherchePopulationVille extends MenuService {
 
     @Override
     public void traiter(Recensement recensement, Scanner scanner) {
@@ -26,5 +28,8 @@ public class RecherchePopulationVille implements MenuService {
         } else {
             System.out.println("Ville introuvable : " + nomVille);
         }
+
+
     }
+
 }

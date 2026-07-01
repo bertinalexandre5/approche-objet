@@ -13,4 +13,5 @@ public class Recensement {
     public List<Ville> getVilles() {
         return villes;
     }
+
 }
